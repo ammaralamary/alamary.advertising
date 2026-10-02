@@ -1,0 +1,1918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ALAMARY Advertising</title>
+
+    <meta name="description"
+        content="ALAMARY Advertising — Advertising, Marketing, Branding and Media Production.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 80% 10%,
+                    rgba(255,255,255,0.055),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(255,255,255,0.035),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #050505 0%,
+                    #0b0b0b 45%,
+                    #111111 100%
+                );
+
+            color: #ffffff;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =========================================
+           CONTAINER
+        ========================================= */
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 82px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(0,0,0,0.96),
+                    rgba(0,0,0,0.82)
+                );
+
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
+
+            z-index: 1000;
+
+            transition: 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            height: 72px;
+
+            background:
+                rgba(5,5,5,0.96);
+        }
+
+        .nav-container {
+            width: min(1280px, 92%);
+
+            height: 100%;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        /* =========================================
+           LOGO
+        ========================================= */
+
+        .logo {
+            width: 68px;
+            height: 68px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 68px;
+            height: 68px;
+
+            display: block;
+
+            object-fit: contain;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 38px;
+
+            list-style: none;
+        }
+
+        .nav-links a {
+            position: relative;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            color: #bdbdbd;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -8px;
+
+            width: 0;
+            height: 1px;
+
+            background: #ffffff;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================================
+           START PROJECT BUTTON
+        ========================================= */
+
+        .nav-button {
+            padding: 12px 21px;
+
+            border:
+                1px solid rgba(255,255,255,0.3);
+
+            border-radius: 4px;
+
+            font-size: 12px !important;
+
+            color: #ffffff !important;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #ffffff;
+
+            color: #000000 !important;
+        }
+
+
+        /* =========================================
+           MOBILE MENU BUTTON
+        ========================================= */
+
+        .menu-toggle {
+            display: none;
+
+            width: 40px;
+            height: 40px;
+
+            border:
+                1px solid rgba(255,255,255,0.15);
+
+            background: transparent;
+
+            color: #ffffff;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            padding-top: 82px;
+
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            right: -200px;
+            top: 100px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,0.07),
+                    transparent 65%
+                );
+
+            filter: blur(30px);
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 400px;
+            height: 400px;
+
+            left: -200px;
+            bottom: -100px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,0.035),
+                    transparent 65%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 900px;
+        }
+
+
+        /* =========================================
+           EYEBROW
+        ========================================= */
+
+        .eyebrow {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #a8a8a8;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 28px;
+        }
+
+        .eyebrow span {
+            display: block;
+
+            width: 35px;
+            height: 1px;
+
+            background: #ffffff;
+        }
+
+
+        /* =========================================
+           HERO TITLE
+        ========================================= */
+
+        .hero h1 {
+            font-size:
+                clamp(52px, 8vw, 105px);
+
+            line-height: 0.92;
+
+            font-weight: 700;
+
+            letter-spacing: -5px;
+
+            max-width: 950px;
+        }
+
+        .hero h1 span {
+            color: #777777;
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            margin-top: 34px;
+
+            font-size:
+                clamp(16px, 2vw, 19px);
+
+            line-height: 1.8;
+
+            color: #a7a7a7;
+        }
+
+
+        /* =========================================
+           HERO BUTTONS
+        ========================================= */
+
+        .hero-actions {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin-top: 42px;
+        }
+
+        .btn {
+            padding: 15px 25px;
+
+            border-radius: 4px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.3s ease;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+
+            background: #e8e8e8;
+        }
+
+        .btn-outline {
+            border:
+                1px solid rgba(255,255,255,0.25);
+
+            color: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background:
+                rgba(255,255,255,0.07);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================
+           SCROLL INDICATOR
+        ========================================= */
+
+        .scroll-indicator {
+            position: absolute;
+
+            bottom: 35px;
+            right: 4%;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #666666;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            writing-mode: vertical-rl;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 45px;
+
+            background: #444444;
+        }
+
+
+        /* =========================================
+           GENERAL SECTIONS
+        ========================================= */
+
+        section {
+            padding: 130px 0;
+
+            position: relative;
+        }
+
+        .section-label {
+            color: #777777;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-size:
+                clamp(35px, 5vw, 62px);
+
+            line-height: 1;
+
+            letter-spacing: -2.5px;
+
+            max-width: 750px;
+        }
+
+        .section-description {
+            color: #8f8f8f;
+
+            line-height: 1.8;
+
+            max-width: 650px;
+
+            margin-top: 25px;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about {
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(255,255,255,0.015),
+                    rgba(255,255,255,0)
+                );
+        }
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 100px;
+
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 25px;
+
+            line-height: 1.55;
+
+            color: #d2d2d2;
+        }
+
+        .about-text strong {
+            color: #ffffff;
+        }
+
+        .about-details {
+            display: grid;
+
+            gap: 25px;
+        }
+
+        .detail {
+            border-left:
+                1px solid #444444;
+
+            padding-left: 22px;
+        }
+
+        .detail h4 {
+            font-size: 14px;
+
+            margin-bottom: 8px;
+        }
+
+        .detail p {
+            color: #777777;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           SERVICES
+        ========================================= */
+
+        .services {
+            border-top:
+                1px solid rgba(255,255,255,0.07);
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            margin-top: 70px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.08);
+
+            border-left:
+                1px solid rgba(255,255,255,0.08);
+        }
+
+        .service-card {
+            padding: 48px;
+
+            min-height: 250px;
+
+            border-right:
+                1px solid rgba(255,255,255,0.08);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
+
+            transition: 0.4s ease;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 0;
+            height: 2px;
+
+            background: #ffffff;
+
+            transition: 0.4s ease;
+        }
+
+        .service-card:hover {
+            background:
+                rgba(255,255,255,0.025);
+        }
+
+        .service-card:hover::before {
+            width: 100%;
+        }
+
+        .service-number {
+            color: #555555;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 50px;
+        }
+
+        .service-card h3 {
+            font-size: 27px;
+
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #888888;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            max-width: 430px;
+        }
+
+
+        /* =========================================
+           STATEMENT
+        ========================================= */
+
+        .statement {
+            min-height: 500px;
+
+            display: flex;
+
+            align-items: center;
+
+            border-top:
+                1px solid rgba(255,255,255,0.07);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.07);
+
+            text-align: center;
+        }
+
+        .statement-content {
+            width: 100%;
+        }
+
+        .statement h2 {
+            font-size:
+                clamp(40px, 7vw, 90px);
+
+            line-height: 1;
+
+            letter-spacing: -4px;
+        }
+
+        .statement h2 span {
+            color: #555555;
+        }
+
+        .statement p {
+            color: #777777;
+
+            max-width: 550px;
+
+            margin: 30px auto 0;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact {
+            padding-bottom: 150px;
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 0.8fr;
+
+            gap: 80px;
+
+            margin-top: 70px;
+        }
+
+        .contact-title {
+            font-size:
+                clamp(35px, 5vw, 60px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+        }
+
+        .contact-info {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 28px;
+        }
+
+        .contact-item {
+            padding-bottom: 22px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
+        }
+
+        .contact-item span {
+            display: block;
+
+            color: #555555;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 8px;
+        }
+
+        .contact-item a,
+        .contact-item p {
+            font-size: 14px;
+
+            color: #bcbcbc;
+        }
+
+        .contact-item a:hover {
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            border-top:
+                1px solid rgba(255,255,255,0.08);
+
+            padding: 30px 0;
+
+            color: #555555;
+
+            font-size: 11px;
+        }
+
+        .footer-inner {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        /* =========================================
+           REVEAL ANIMATION
+        ========================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(30px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                height: 72px;
+            }
+
+            .logo {
+                width: 58px;
+                height: 58px;
+            }
+
+            .logo img {
+                width: 58px;
+                height: 58px;
+            }
+
+            .nav-links {
+                position: absolute;
+
+                top: 72px;
+                left: 0;
+
+                width: 100%;
+
+                padding: 25px 5%;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 22px;
+
+                background:
+                    rgba(5,5,5,0.97);
+
+                border-bottom:
+                    1px solid rgba(255,255,255,0.08);
+
+                opacity: 0;
+
+                visibility: hidden;
+
+                transform:
+                    translateY(-10px);
+
+                transition: 0.3s ease;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+
+                visibility: visible;
+
+                transform:
+                    translateY(0);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-button {
+                width: 100%;
+
+                text-align: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+            }
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 650px) {
+
+            .hero {
+                padding-top: 72px;
+
+                min-height: 90vh;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+
+            .hero-description {
+                font-size: 15px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+
+                align-items: stretch;
+
+                max-width: 280px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            section {
+                padding: 90px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+
+                margin-top: 50px;
+            }
+
+            .service-card {
+                padding: 32px;
+
+                min-height: 220px;
+            }
+
+            .service-number {
+                margin-bottom: 35px;
+            }
+
+            .about-text {
+                font-size: 20px;
+            }
+
+            .statement {
+                min-height: 400px;
+            }
+
+            .statement h2 {
+                letter-spacing: -2px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                gap: 12px;
+
+                text-align: center;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+        }
+
+
+        /* =========================================
+           LARGE SCREENS
+        ========================================= */
+
+        @media (min-width: 1800px) {
+
+            .container {
+                width: min(1400px, 88%);
+            }
+
+            .nav-container {
+                width: min(1450px, 88%);
+            }
+
+            .hero h1 {
+                font-size: 120px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <header class="navbar" id="navbar">
+
+        <div class="nav-container">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="#home"
+                class="logo"
+            >
+
+                <img
+                    src="white-rec.png"
+                    alt="ALAMARY Advertising Logo"
+                >
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu"
+            >
+                ☰
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <nav>
+
+                <ul
+                    class="nav-links"
+                    id="navLinks"
+                >
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+
+                        <a
+                            href="https://wa.me/201111360613"
+                            target="_blank"
+                            rel="noopener"
+                            class="nav-button"
+                        >
+                            Start a Project
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main>
+
+
+        <!-- =========================================
+             HERO
+        ========================================= -->
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="container">
+
+                <div
+                    class="hero-content reveal"
+                >
+
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        ALAMARY Advertising
+
+                    </div>
+
+
+                    <h1>
+
+                        We turn ideas
+
+                        <span>
+                            into impact.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        We turn ideas into impactful stories,
+                        build brands that inspire, engage
+                        and make a difference.
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+
+                        <a
+                            href="#services"
+                            class="btn btn-primary"
+                        >
+
+                            Explore Our Services
+
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/201111360613"
+                            target="_blank"
+                            rel="noopener"
+                            class="btn btn-outline"
+                        >
+
+                            Start a Conversation
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="scroll-indicator">
+
+                <div class="scroll-line"></div>
+
+                Scroll
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             ABOUT
+        ========================================= -->
+
+        <section
+            class="about"
+            id="about"
+        >
+
+            <div class="container">
+
+
+                <div class="about-grid">
+
+
+                    <div class="reveal">
+
+
+                        <div class="section-label">
+
+                            About ALAMARY
+
+                        </div>
+
+
+                        <p class="about-text">
+
+                            <strong>
+                                Ideas are everywhere.
+                            </strong>
+
+                            We transform them into stories,
+                            identities, campaigns and
+                            experiences that people remember.
+
+                        </p>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="about-details reveal"
+                    >
+
+
+                        <div class="detail">
+
+                            <h4>
+                                Creative Thinking
+                            </h4>
+
+                            <p>
+
+                                We approach every project
+                                with a clear creative direction
+                                and a purpose behind every
+                                visual decision.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="detail">
+
+                            <h4>
+                                Strategic Communication
+                            </h4>
+
+                            <p>
+
+                                We build communication that
+                                connects brands with their
+                                audiences in meaningful ways.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="detail">
+
+                            <h4>
+                                Built To Make A Difference
+                            </h4>
+
+                            <p>
+
+                                From the first idea to the final
+                                execution, every detail is designed
+                                to create impact.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             SERVICES
+        ========================================= -->
+
+        <section
+            class="services"
+            id="services"
+        >
+
+            <div class="container">
+
+
+                <div class="reveal">
+
+
+                    <div class="section-label">
+
+                        What We Do
+
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        Creative solutions
+                        built around your brand.
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        From strategy and branding to
+                        advertising and production, we bring
+                        different creative disciplines together
+                        to build stronger brand experiences.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="services-grid">
+
+
+                    <!-- SERVICE 01 -->
+
+                    <article
+                        class="service-card reveal"
+                    >
+
+                        <div class="service-number">
+
+                            01 / 04
+
+                        </div>
+
+                        <h3>
+                            Advertising
+                        </h3>
+
+                        <p>
+
+                            Creative advertising campaigns
+                            designed to capture attention,
+                            communicate clearly and turn ideas
+                            into memorable experiences.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 02 -->
+
+                    <article
+                        class="service-card reveal"
+                    >
+
+                        <div class="service-number">
+
+                            02 / 04
+
+                        </div>
+
+                        <h3>
+                            Marketing
+                        </h3>
+
+                        <p>
+
+                            Strategic marketing solutions
+                            that help brands reach the right
+                            audience and communicate with purpose.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 03 -->
+
+                    <article
+                        class="service-card reveal"
+                    >
+
+                        <div class="service-number">
+
+                            03 / 04
+
+                        </div>
+
+                        <h3>
+                            Branding
+                        </h3>
+
+                        <p>
+
+                            Distinctive identities, visual systems
+                            and brand experiences that give
+                            businesses a clear and recognizable presence.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 04 -->
+
+                    <article
+                        class="service-card reveal"
+                    >
+
+                        <div class="service-number">
+
+                            04 / 04
+
+                        </div>
+
+                        <h3>
+                            Media Production
+                        </h3>
+
+                        <p>
+
+                            Photography, video and visual content
+                            produced to bring your message to life
+                            across modern media platforms.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             STATEMENT
+        ========================================= -->
+
+        <section class="statement">
+
+            <div class="container">
+
+
+                <div
+                    class="statement-content reveal"
+                >
+
+
+                    <div class="section-label">
+
+                        Our Philosophy
+
+                    </div>
+
+
+                    <h2>
+
+                        Build brands.
+
+                        <span>
+                            Create impact.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        We believe great communication
+                        doesn't just look good. It should have
+                        a purpose, create emotion and make
+                        people remember.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTACT
+        ========================================= -->
+
+        <section
+            class="contact"
+            id="contact"
+        >
+
+            <div class="container">
+
+
+                <div class="reveal">
+
+
+                    <div class="section-label">
+
+                        Let's Work Together
+
+                    </div>
+
+
+                    <div class="contact-grid">
+
+
+                        <div>
+
+
+                            <h2 class="contact-title">
+
+                                Have an idea?
+
+                                <br>
+
+                                Let's make it
+
+                                <span style="color:#555;">
+
+                                    impactful.
+
+                                </span>
+
+                            </h2>
+
+
+                            <div
+                                style="margin-top:35px;"
+                            >
+
+                                <a
+                                    href="https://wa.me/201111360613"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="btn btn-primary"
+                                >
+
+                                    WhatsApp Us
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="contact-info">
+
+
+                            <!-- WHATSAPP -->
+
+                            <div class="contact-item">
+
+                                <span>
+                                    WhatsApp
+                                </span>
+
+                                <a
+                                    href="https://wa.me/201111360613"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+
+                                    01111360613
+
+                                </a>
+
+                            </div>
+
+
+
+                            <!-- SERVICES -->
+
+                            <div class="contact-item">
+
+                                <span>
+                                    Services
+                                </span>
+
+                                <p>
+
+                                    Advertising · Marketing ·
+                                    Branding · Media Production
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- AVAILABILITY -->
+
+                            <div class="contact-item">
+
+                                <span>
+                                    Availability
+                                </span>
+
+                                <p>
+
+                                    Working with ambitious
+                                    brands locally and globally.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-inner">
+
+
+                <div>
+
+                    © 2026 ALAMARY Advertising
+
+                </div>
+
+
+                <div>
+
+                    <a
+                        href="https://wa.me/201111360613"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        01111360613
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+
+        /* =========================================
+           NAVBAR SCROLL
+        ========================================= */
+
+        const navbar =
+            document.getElementById("navbar");
+
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                if (window.scrollY > 40) {
+
+                    navbar.classList.add(
+                        "scrolled"
+                    );
+
+                } else {
+
+                    navbar.classList.remove(
+                        "scrolled"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           MOBILE MENU
+        ========================================= */
+
+        const menuToggle =
+            document.getElementById(
+                "menuToggle"
+            );
+
+        const navLinks =
+            document.getElementById(
+                "navLinks"
+            );
+
+
+        menuToggle.addEventListener(
+            "click",
+            () => {
+
+                navLinks.classList.toggle(
+                    "active"
+                );
+
+            }
+        );
+
+
+
+        /* =========================================
+           CLOSE MOBILE MENU
+        ========================================= */
+
+        document
+            .querySelectorAll(
+                ".nav-links a"
+            )
+            .forEach(
+                link => {
+
+                    link.addEventListener(
+                        "click",
+                        () => {
+
+                            navLinks.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+        /* =========================================
+           SCROLL REVEAL
+        ========================================= */
+
+        const revealElements =
+            document.querySelectorAll(
+                ".reveal"
+            );
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach(
+                        entry => {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "active"
+                                );
+
+                                revealObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(
+            element => {
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
